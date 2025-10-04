@@ -5,5 +5,4 @@ const LearnMore = () => {
     <div>LearnMore</div>
   )
 }
-
 export default LearnMore
