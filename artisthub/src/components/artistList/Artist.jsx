@@ -4,6 +4,7 @@ import images from "../../assets/index.js";
 const Artist = () => {
   const [artistList, setArtistList] = useState([]);
   const [page, setPage] = useState(1);
+  const [id, setId] = useState(null)
   async function fetchArtists() {
     const response = await fetch(
       `https://sound-wave.b.goit.study/api/artists?limit=10&page=${page}`
@@ -32,7 +33,7 @@ const Artist = () => {
               <p className={s.name}>{artist.strArtist}</p>
               <p className={s.text}>{artist.strBiographyEN}</p>
               <div className={s.details}>
-                <button className={s.detailText}>
+                <button className={s.detailText} onClick={()=>{setId(artist._id)}}>
                   Learn more <img src={images.icon} className={s.arrow}></img>
                 </button>
               </div>

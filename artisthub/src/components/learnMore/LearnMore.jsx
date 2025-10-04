@@ -2,7 +2,9 @@ import React from 'react'
 
 const LearnMore = () => {
   return (
-    <div>LearnMore</div>
+    <div>
+      
+    </div>
   )
 }
 export default LearnMore
