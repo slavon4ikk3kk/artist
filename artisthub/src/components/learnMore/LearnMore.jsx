@@ -46,6 +46,22 @@ const LearnMore = ({ id }) => {
             return <li className={s.genre}>{genre}</li>
           })}
         </ul>
+        <ul>
+          {artist.albumsList.map((album) => {
+            return <li>
+              <p>{album.strAlbum}</p>
+              <ul>
+                {album.tracks.map((track)=>{
+                  <div className={s.trackInfo}>
+                      <p>{track.name}</p>
+                      <p>{track.time}</p>
+                      <p>{track.link}</p>
+                  </div>
+                })}
+              </ul>
+            </li>
+          })}
+        </ul>
       </div>
       }
     </div>
