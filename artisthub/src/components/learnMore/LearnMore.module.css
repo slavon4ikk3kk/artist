@@ -7,15 +7,128 @@
   background-color: #000000cf;
   padding: 64px 16px;
 }
+
 .modal {
-  background-color: wheat;
+  background-color: #060307;
   width: 100%;
   height: 100%;
   overflow: scroll;
-}
-.year{
   color: white;
 }
-.yearActive{
-  color: white;
+
+.artistName {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  line-height: 130%;
+  letter-spacing: -1%;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.yearActive {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  margin-top: 32px;
+}
+
+.year {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  padding-bottom: 16px;
+}
+
+.sex {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  padding-bottom: 16px;
+}
+
+.gender {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  padding-bottom: 16px;
+}
+.members{
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+}
+.membersValue{
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  padding-bottom: 16px;
+}
+.countryTitle{
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+}
+.countryValue{
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  padding-bottom: 16px;
+}
+.biographyTitle{
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+}
+.biographyValue{
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  padding-bottom: 16px;
+}
+.genre {
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid #ffffff33;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+}
+.ulGenre {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 24px 0 16px;
+}
+.album{
+  background-color: #1E1C1F;
+  padding: 14px 11px;
+}
+.albums{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.albumName{
+font-family: "IBM Plex Sans", sans-serif;
+font-weight: 600;
+font-size: 16px;
+line-height: 150%;
+margin-bottom: 12px;
+}
+.trackInfo{
+  display: flex;
+  align-items: center;
 }

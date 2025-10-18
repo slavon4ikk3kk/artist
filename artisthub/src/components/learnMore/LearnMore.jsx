@@ -30,40 +30,40 @@ const LearnMore = ({ id }) => {
     <div className={s.overlay}>
       {artist && (
         <div className={s.modal}>
-          <p>{artist.strArtist}</p>
+          <p className={s.artistName}>{artist.strArtist}</p>
           <img src={artist.strArtistThumb}></img>
           <p className={s.yearActive}>Years active:</p>
           <p className={s.year}>{artist.intFormedYear}</p>
-          <p>Sex</p>
-          <p>{artist.strGender}</p>
-          <p>Members</p>
-          <p>{artist.intMembers}</p>
-          <p>Country</p>
-          <p>{artist.strCountry}</p>
-          <p>Biography</p>
-          <p>{artist.strBiographyEN}</p>
-          <ul>
+          <p className={s.sex}>Sex</p>
+          <p className={s.gender}>{artist.strGender}</p>
+          <p className={s.members}>Members</p>
+          <p className={s.membersValue}>{artist.intMembers}</p>
+          <p className={s.countryTitle}>Country</p>
+          <p className={s.countryValue}>{artist.strCountry}</p>
+          <p className={s.biographyTitle}>Biography</p>
+          <p className={s.biographyValue}>{artist.strBiographyEN}</p>
+          <ul className={s.ulGenre}>
             {artist.genres.map((genre) => {
               return <li className={s.genre}>{genre}</li>;
             })}
           </ul>
-          <ul>
+          <ul className={s.albums}>
             {albums &&
               albums.albumsList.map((album) => {
                 return (
-                  <li>
-                    <p>{album.strAlbum}</p>
+                  <li className={s.album}>
+                    <p className={s.albumName}>{album.strAlbum}</p>
                     <ul>
                       {album.tracks.map((track) => {
                         return (
                           <div className={s.trackInfo}>
                             <p>{track.strTrack}</p>
                             <p>{track.intDuration}</p>
-                            {track.movie && (
+                            
                               <a href={track.movie} target="_blank">
                                 link
                               </a>
-                            )}
+                            
                           </div>
                         );
                       })}
