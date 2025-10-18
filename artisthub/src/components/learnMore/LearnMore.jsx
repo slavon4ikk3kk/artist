@@ -25,9 +25,29 @@ const LearnMore = ({ id }) => {
   useEffect(() => {
     fetchAlbums();
   }, [id]);
+  console.log(artist);
   return (
     <div className={s.overlay}>
-      <div className={s.modal}></div>
+      {artist && <div className={s.modal}>
+        <p>{artist.strArtist}</p>
+        <img src={artist.strArtistThumb}></img>
+        <p className={s.yearActive}>Years active:</p>
+        <p className={s.year}>{artist.intFormedYear}</p>
+        <p>Sex</p>
+        <p>{artist.strGender}</p>
+        <p>Members</p>
+        <p>{artist.intMembers}</p>
+        <p>Country</p>
+        <p>{artist.strCountry}</p>
+        <p>Biography</p>
+        <p>{artist.strBiographyEN}</p>
+        <ul>
+          {artist.genres.map((genre) => {
+            return <li className={s.genre}>{genre}</li>
+          })}
+        </ul>
+      </div>
+      }
     </div>
   );
 };
