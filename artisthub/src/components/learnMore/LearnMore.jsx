@@ -28,42 +28,52 @@ const LearnMore = ({ id }) => {
   console.log(artist);
   return (
     <div className={s.overlay}>
-      {artist && <div className={s.modal}>
-        <p>{artist.strArtist}</p>
-        <img src={artist.strArtistThumb}></img>
-        <p className={s.yearActive}>Years active:</p>
-        <p className={s.year}>{artist.intFormedYear}</p>
-        <p>Sex</p>
-        <p>{artist.strGender}</p>
-        <p>Members</p>
-        <p>{artist.intMembers}</p>
-        <p>Country</p>
-        <p>{artist.strCountry}</p>
-        <p>Biography</p>
-        <p>{artist.strBiographyEN}</p>
-        <ul>
-          {artist.genres.map((genre) => {
-            return <li className={s.genre}>{genre}</li>
-          })}
-        </ul>
-        <ul>
-          {artist.albumsList.map((album) => {
-            return <li>
-              <p>{album.strAlbum}</p>
-              <ul>
-                {album.tracks.map((track)=>{
-                  <div className={s.trackInfo}>
-                      <p>{track.name}</p>
-                      <p>{track.time}</p>
-                      <p>{track.link}</p>
-                  </div>
-                })}
-              </ul>
-            </li>
-          })}
-        </ul>
-      </div>
-      }
+      {artist && (
+        <div className={s.modal}>
+          <p>{artist.strArtist}</p>
+          <img src={artist.strArtistThumb}></img>
+          <p className={s.yearActive}>Years active:</p>
+          <p className={s.year}>{artist.intFormedYear}</p>
+          <p>Sex</p>
+          <p>{artist.strGender}</p>
+          <p>Members</p>
+          <p>{artist.intMembers}</p>
+          <p>Country</p>
+          <p>{artist.strCountry}</p>
+          <p>Biography</p>
+          <p>{artist.strBiographyEN}</p>
+          <ul>
+            {artist.genres.map((genre) => {
+              return <li className={s.genre}>{genre}</li>;
+            })}
+          </ul>
+          <ul>
+            {albums &&
+              albums.albumsList.map((album) => {
+                return (
+                  <li>
+                    <p>{album.strAlbum}</p>
+                    <ul>
+                      {album.tracks.map((track) => {
+                        return (
+                          <div className={s.trackInfo}>
+                            <p>{track.strTrack}</p>
+                            <p>{track.intDuration}</p>
+                            {track.movie && (
+                              <a href={track.movie} target="_blank">
+                                link
+                              </a>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </ul>
+                  </li>
+                );
+              })}
+          </ul>
+        </div>
+      )}
     </div>
   );
 };
