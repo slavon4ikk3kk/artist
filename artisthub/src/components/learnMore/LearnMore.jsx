@@ -57,13 +57,16 @@ const LearnMore = ({ id }) => {
                       {album.tracks.map((track) => {
                         return (
                           <div className={s.trackInfo}>
-                            <p>{track.strTrack}</p>
-                            <p>{track.intDuration}</p>
-                            
-                              <a href={track.movie} target="_blank">
-                                link
-                              </a>
-                            
+                            <p className={s.strTrack}>{track.strTrack}</p>
+                            <p className={s.intDuration}>{track.intDuration}</p>
+
+                            <a
+                              className={s.trackLink}
+                              href={track.movie}
+                              target="_blank"
+                            >
+                              link
+                            </a>
                           </div>
                         );
                       })}

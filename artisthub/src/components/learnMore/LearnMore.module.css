@@ -58,39 +58,39 @@
   line-height: 150%;
   padding-bottom: 16px;
 }
-.members{
+.members {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 600;
   font-size: 18px;
   line-height: 150%;
 }
-.membersValue{
+.membersValue {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
   padding-bottom: 16px;
 }
-.countryTitle{
+.countryTitle {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 600;
   font-size: 18px;
   line-height: 150%;
 }
-.countryValue{
+.countryValue {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
   padding-bottom: 16px;
 }
-.biographyTitle{
+.biographyTitle {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 600;
   font-size: 18px;
   line-height: 150%;
 }
-.biographyValue{
+.biographyValue {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -112,23 +112,37 @@
   gap: 16px;
   margin: 24px 0 16px;
 }
-.album{
-  background-color: #1E1C1F;
+.album {
+  background-color: #1e1c1f;
   padding: 14px 11px;
 }
-.albums{
+.albums {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
-.albumName{
-font-family: "IBM Plex Sans", sans-serif;
-font-weight: 600;
-font-size: 16px;
-line-height: 150%;
-margin-bottom: 12px;
+.albumName {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  margin-bottom: 12px;
 }
-.trackInfo{
+.trackInfo {
   display: flex;
   align-items: center;
+}
+.trackInfo:nth-child(2n) {
+  background-color: gray;
+}
+.strTrack {
+  flex-grow: 1;
+}
+.intDuration {
+  width: 50px;
+  text-align: center;
+}
+.trackLink {
+  width: 50px;
+  text-align: center;
 }
