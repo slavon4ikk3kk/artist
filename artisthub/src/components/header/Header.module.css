@@ -1,13 +1,56 @@
-.header{
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: black;
+    
 }
-.logo{
+.logo {
     width: 119px;
     height: 51px;
 }
-.menu{
+
+.menu {
     width: 24px;
     height: 24px;
+}
+
+.modalHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.overlay {
+    background-color: #060307;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 17px 26px;
+}
+
+.close {
+    width: 48px;
+    height: 48px;
+}
+
+.ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    gap: 32px;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 150%;
 }

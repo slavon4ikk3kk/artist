@@ -1,0 +1,26 @@
+.p {
+    color: white;
+    font-family: "Epilogue", sans-serif;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 120%;
+    letter-spacing: -1%;
+    margin-bottom: 20px;
+}
+.aboutContainer{
+    padding: 64px 16px 48px 16px;
+}
+.icon {
+    width: 64px;
+    height: 64px;
+    margin: 48px 0 20px 0;
+}
+
+.description {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: white;
+}

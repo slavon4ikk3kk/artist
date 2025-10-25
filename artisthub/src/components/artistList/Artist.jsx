@@ -21,7 +21,7 @@ const Artist = () => {
   }, [page]);
 
   return (
-    <section>
+    <section id="artists">
       <ul className={s.ul}>
         {artistList.length > 0 &&
           artistList.map((artist) => {
@@ -43,7 +43,7 @@ const Artist = () => {
                       setId(artist._id);
                     }}
                   >
-                    Learn more <img src={images.icon} className={s.arrow}></img>
+                    Learn more <img src={images.arrow} className={s.arrow}></img>
                   </button>
                 </div>
               </li>
