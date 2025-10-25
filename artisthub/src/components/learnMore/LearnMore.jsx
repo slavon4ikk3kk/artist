@@ -59,7 +59,6 @@ const LearnMore = ({ id }) => {
                           <div className={s.trackInfo}>
                             <p className={s.strTrack}>{track.strTrack}</p>
                             <p className={s.intDuration}>{track.intDuration}</p>
-
                             <a
                               className={s.trackLink}
                               href={track.movie}
