@@ -26,7 +26,10 @@
   text-align: center;
   margin-bottom: 16px;
 }
-
+.artistPhoto{
+ border-radius: 8px;
+ width: 100%;
+}
 .yearActive {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 600;
@@ -58,12 +61,14 @@
   line-height: 150%;
   padding-bottom: 16px;
 }
+
 .members {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 600;
   font-size: 18px;
   line-height: 150%;
 }
+
 .membersValue {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
@@ -71,12 +76,14 @@
   line-height: 150%;
   padding-bottom: 16px;
 }
+
 .countryTitle {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 600;
   font-size: 18px;
   line-height: 150%;
 }
+
 .countryValue {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
@@ -84,12 +91,14 @@
   line-height: 150%;
   padding-bottom: 16px;
 }
+
 .biographyTitle {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 600;
   font-size: 18px;
   line-height: 150%;
 }
+
 .biographyValue {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
@@ -97,6 +106,7 @@
   line-height: 150%;
   padding-bottom: 16px;
 }
+
 .genre {
   padding: 4px 10px;
   border-radius: 6px;
@@ -106,21 +116,26 @@
   font-weight: 600;
   line-height: 150%;
 }
+
 .ulGenre {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
   margin: 24px 0 16px;
 }
+
 .album {
   background-color: #1e1c1f;
   padding: 14px 11px;
 }
+
 .albums {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  flex-shrink: 1;
 }
+
 .albumName {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 600;
@@ -128,20 +143,36 @@
   line-height: 150%;
   margin-bottom: 12px;
 }
+
 .trackInfo {
   display: flex;
   align-items: center;
+   background-color: #FFFFFF1A;
 }
+
 .trackInfo:nth-child(2n) {
   background-color: gray;
+  border-radius: 8px;
 }
+
 .strTrack {
   flex-grow: 1;
+  padding: 8px 12px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  line-height: 150%;
+ 
+}
+.youtube{
+  width: 24px;
+  height: 24px;
+  margin-left: 16px;
 }
 .intDuration {
   width: 50px;
   text-align: center;
 }
+
 .trackLink {
   width: 50px;
   text-align: center;

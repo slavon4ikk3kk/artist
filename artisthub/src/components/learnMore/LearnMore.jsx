@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import s from "./LearnMore.module.css";
-
+import images from "../../assets/index"
 const LearnMore = ({ id }) => {
   const [artist, setArtist] = useState(null);
   const [albums, setalbums] = useState(null);
@@ -25,13 +25,25 @@ const LearnMore = ({ id }) => {
   useEffect(() => {
     fetchAlbums();
   }, [id]);
-  console.log(artist);
+
+
+  const formatDuration = (milliseconds) => {
+    if (!milliseconds) return "0:00"; // Защита от null или 0
+
+    const totalSeconds = Math.floor(milliseconds / 1000);
+    const minutes = Math.floor(totalSeconds / 60);
+    const seconds = totalSeconds % 60;
+    const formattedSeconds = String(seconds).padStart(2, '0');
+
+    return `${minutes}:${formattedSeconds}`;
+  };
+
   return (
     <div className={s.overlay}>
       {artist && (
         <div className={s.modal}>
           <p className={s.artistName}>{artist.strArtist}</p>
-          <img src={artist.strArtistThumb}></img>
+          <img src={artist.strArtistThumb} className={s.artistPhoto}></img>
           <p className={s.yearActive}>Years active:</p>
           <p className={s.year}>{artist.intFormedYear}</p>
           <p className={s.sex}>Sex</p>
@@ -58,13 +70,13 @@ const LearnMore = ({ id }) => {
                         return (
                           <div className={s.trackInfo}>
                             <p className={s.strTrack}>{track.strTrack}</p>
-                            <p className={s.intDuration}>{track.intDuration}</p>
+                            <p className={s.intDuration}>{formatDuration(track.intDuration)}</p>
                             <a
                               className={s.trackLink}
                               href={track.movie}
                               target="_blank"
                             >
-                              link
+                              <img src={images.youtube} className={s.youtube}></img>
                             </a>
                           </div>
                         );
