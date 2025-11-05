@@ -44,3 +44,14 @@
 .heroContainer{
     padding-top: 70px;
 }
+.photosContainer{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.wrapOne, .wrapTwo{
+    width: calc(50% - 8px);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}

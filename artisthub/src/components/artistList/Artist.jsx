@@ -22,6 +22,10 @@ const Artist = () => {
 
   return (
     <section id="artists">
+      <div className={s.textContainer}>
+        <p className={s.pArtists}>Artists</p>
+        <p className={s.explore}>Explore Your New Favorite Artists</p>
+      </div>
       <ul className={s.ul}>
         {artistList.length > 0 &&
           artistList.map((artist) => {
