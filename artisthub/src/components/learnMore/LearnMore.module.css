@@ -26,9 +26,9 @@
   text-align: center;
   margin-bottom: 16px;
 }
-.artistPhoto{
- border-radius: 8px;
- width: 100%;
+.artistPhoto {
+  border-radius: 8px;
+  width: 100%;
 }
 .yearActive {
   font-family: "IBM Plex Sans", sans-serif;
@@ -147,12 +147,12 @@
 .trackInfo {
   display: flex;
   align-items: center;
-   background-color: #FFFFFF1A;
+
+  border-radius: 8px;
 }
 
 .trackInfo:nth-child(2n) {
   background-color: gray;
-  border-radius: 8px;
 }
 
 .strTrack {
@@ -161,9 +161,8 @@
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
   line-height: 150%;
- 
 }
-.youtube{
+.youtube {
   width: 24px;
   height: 24px;
   margin-left: 16px;
@@ -175,5 +174,33 @@
 
 .trackLink {
   width: 50px;
+  text-align: center;
+}
+.none {
+  width: 50px;
+  text-align: center;
+  padding-left: 7px;
+}
+.titleList {
+  display: flex;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  color: white;
+  font-size: 8px;
+
+  line-height: 150%;
+  letter-spacing: 0%;
+  display: flex;
+  background-color: gray;
+  padding: 4px 12px;
+  border-radius: 8px;
+  justify-content: space-between;
+}
+.titleWrap {
+  display: flex;
+  gap: 35px;
+}
+.titleLink {
+  width: 20px;
   text-align: center;
 }
