@@ -1,57 +1,68 @@
 .button {
-    background-color: #764191;
-    font-family: "IBM Plex Sans", sans-serif;
-    font-weight: 500;
-    font-style: Medium;
-    font-size: 18px;
-    line-height: 150%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 24px;
-    color: white;
-    gap: 12px;
-    border-radius: 12px;
-    box-shadow:
-        0px 1px 2px 0px rgba(6, 3, 7, 0.05),
-        0px -2px 1px 0px rgba(0, 0, 0, 0.2) inset,
-        0px 0px 0px 1px rgba(6, 3, 7, 0.05) inset,
-        0px 2px 1px 0px rgba(255, 255, 255, 0.25) inset,
-        0px 32px 24px 0px rgba(255, 255, 255, 0.05) inset;
-    margin-bottom: 64px;
+  background-color: #764191;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 18px;
+  line-height: 150%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  color: white;
+  gap: 12px;
+  border-radius: 12px;
+  box-shadow: 0px 1px 2px 0px rgba(6, 3, 7, 0.05),
+    0px -2px 1px 0px rgba(0, 0, 0, 0.2) inset,
+    0px 0px 0px 1px rgba(6, 3, 7, 0.05) inset,
+    0px 2px 1px 0px rgba(255, 255, 255, 0.25) inset,
+    0px 32px 24px 0px rgba(255, 255, 255, 0.05) inset;
+  margin-bottom: 64px;
 }
 .label {
-    font-family: "Epilogue", sans-serif;
-    font-weight: 700;
-    font-size: 48px;
-    letter-spacing: -1%;
-    color: white;
+  font-family: "Epilogue", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  letter-spacing: -1%;
+  color: white;
 }
 .description {
-    color: white;
-    font-family: "IBM Plex Sans", sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 150%;
-    letter-spacing: 0%;
-    margin: 20px 16px 24px 16px;
+  color: white;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  margin: 20px 0px 24px;
 }
 .rightArrow {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }
-.heroContainer{
-    padding-top: 70px;
+.heroContainer {
+  padding-top: 140px;
+  background: rgba(35, 19, 43, 1);
+  position: relative;
 }
-.photosContainer{
-    display: flex;
-    align-items: center;
-    gap: 16px;
+.photosContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
 }
-.wrapOne, .wrapTwo{
-    width: calc(50% - 8px);
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+.wrapOne,
+.wrapTwo {
+  width: calc(50% - 8px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gradient {
+  height: 80px;
+  width: 100vw;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  background: linear-gradient(180deg, rgba(35, 19, 43, 0) 0%, #060307 100%);
 }

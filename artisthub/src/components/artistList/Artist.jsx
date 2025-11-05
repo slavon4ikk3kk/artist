@@ -21,48 +21,51 @@ const Artist = () => {
   }, [page]);
 
   return (
-    <section id="artists">
-      <div className={s.textContainer}>
-        <p className={s.pArtists}>Artists</p>
-        <p className={s.explore}>Explore Your New Favorite Artists</p>
+    <section id="artists" className={s.section}>
+      <div className="container">
+        <div className={s.textContainer}>
+          <p className={s.pArtists}>Artists</p>
+          <p className={s.explore}>Explore Your New Favorite Artists</p>
+        </div>
+        <ul className={s.ul}>
+          {artistList.length > 0 &&
+            artistList.map((artist) => {
+              return (
+                <li>
+                  <img src={artist.strArtistThumb}></img>
+                  <ul className={s.ulGenre}>
+                    {artist.genres.map((genre) => {
+                      return <li className={s.genre}>{genre}</li>;
+                    })}
+                  </ul>
+                  <p className={s.name}>{artist.strArtist}</p>
+                  <p className={s.text}>{artist.strBiographyEN}</p>
+                  <div className={s.details}>
+                    <button
+                      className={s.detailText}
+                      onClick={() => {
+                        setIsModal(true);
+                        setId(artist._id);
+                      }}
+                    >
+                      Learn more{" "}
+                      <img src={images.arrow} className={s.arrow}></img>
+                    </button>
+                  </div>
+                </li>
+              );
+            })}
+          <button
+            className={s.loadMore}
+            onClick={() => {
+              setPage(page + 1);
+            }}
+          >
+            Load more
+          </button>
+        </ul>
+        {isModal && <LearnMore id={id}></LearnMore>}
       </div>
-      <ul className={s.ul}>
-        {artistList.length > 0 &&
-          artistList.map((artist) => {
-            return (
-              <li>
-                <img src={artist.strArtistThumb}></img>
-                <ul className={s.ulGenre}>
-                  {artist.genres.map((genre) => {
-                    return <li className={s.genre}>{genre}</li>;
-                  })}
-                </ul>
-                <p className={s.name}>{artist.strArtist}</p>
-                <p className={s.text}>{artist.strBiographyEN}</p>
-                <div className={s.details}>
-                  <button
-                    className={s.detailText}
-                    onClick={() => {
-                      setIsModal(true);
-                      setId(artist._id);
-                    }}
-                  >
-                    Learn more <img src={images.arrow} className={s.arrow}></img>
-                  </button>
-                </div>
-              </li>
-            );
-          })}
-        <button
-          className={s.loadMore}
-          onClick={() => {
-            setPage(page + 1);
-          }}
-        >
-          Load more
-        </button>
-      </ul>
-      {isModal && <LearnMore id={id}></LearnMore>}
     </section>
   );
 };

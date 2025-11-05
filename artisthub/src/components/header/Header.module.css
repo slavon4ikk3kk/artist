@@ -1,57 +1,64 @@
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    background-color: black;
-    padding: 0 12px 0 20px;
-    
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: black;
+  padding: 0 12px 0 20px;
+  z-index: 1000;
 }
 .logo {
-    width: 119px;
-    height: 51px;
+  width: 119px;
+  height: 51px;
 }
 
 .menu {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
 .modalHeader {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .overlay {
-    background-color: #060307;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 17px 26px;
+  background-color: #060307;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 17px 26px;
 }
 
 .close {
-    width: 48px;
-    height: 48px;
+  width: 48px;
+  height: 48px;
 }
 
 .ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: white;
-    gap: 32px;
-    font-family: "IBM Plex Sans", sans-serif;
-    font-weight: 500;
-    font-size: 26px;
-    line-height: 150%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  gap: 32px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 150%;
+}
+.gradient {
+  height: 80px;
+  width: 100vw;
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+  background: linear-gradient(180deg, #060307 0%, rgba(35, 19, 43, 0) 100%);
 }
