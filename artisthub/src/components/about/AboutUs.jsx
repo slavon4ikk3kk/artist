@@ -5,7 +5,7 @@ const About = ({}) => {
   return (
     <div className={s.aboutContainer} id="about">
       <img src={images.people}></img>
-      <img src={images.logo} className={s.icon}></img>
+      <img src={images.logoIcon} className={s.icon}></img>
       <p className={s.p}>About ArtistsHub</p>
       <p className={s.description}>
         At ArtistsHub, our mission is to connect music lovers with the artists
