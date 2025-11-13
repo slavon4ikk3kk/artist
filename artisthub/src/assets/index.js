@@ -16,6 +16,7 @@ import purple from "./purpleLogo.svg";
 import facebook from "./facebook.png";
 import instagram from "./instagram.png";
 import youtubechik from "./youtubechik.png";
+import star from "./star.png";
+import purpleStar from "./purpleStar.png"
 
-
-export default {arrow, logo, menu, youtube, close, people, icon, rightArrow, first, second, third, four, five, logoIcon, purple, facebook, instagram, youtubechik};
+export default {arrow, logo, menu, youtube, close, people, icon, rightArrow, first, second, third, four, five, logoIcon, purple, facebook, instagram, youtubechik, star, purpleStar};

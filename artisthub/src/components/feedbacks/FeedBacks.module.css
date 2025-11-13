@@ -1,0 +1,21 @@
+.description {
+    font-family: "Epilogue", sans-serif;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: -1%;
+    text-align: center;
+    padding-bottom: 32px;
+}
+.name {
+    font-family: "IBM Plex Sans";
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+.swiperContainer{
+    padding-bottom: 48px;
+}
