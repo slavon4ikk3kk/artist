@@ -23,6 +23,18 @@ const Footer = () => {
                     </a>
                 </li>
             </ul>
+            <ul className={s.logos}>
+                <li>
+                    <a href="#"><img src={images.instagram} className={s.icons}></img></a>
+                </li>
+                <li>
+                    <a href="#"><img src={images.facebook} className={s.icons}></img></a>
+                </li>
+                <li>
+                    <a href='#'><img src={images.youtubechik} className={s.icons}></img></a>
+                </li>
+            </ul>
+            <p className={s.bottomText}>© 2025 ArtistsHub. All rights reserved</p>
         </footer>
     )
 }

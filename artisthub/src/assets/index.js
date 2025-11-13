@@ -13,6 +13,9 @@ import four from "./four.png";
 import five from "./five.png";
 import logoIcon from "./logoIcon.svg";
 import purple from "./purpleLogo.svg";
+import facebook from "./facebook.png";
+import instagram from "./instagram.png";
+import youtubechik from "./youtubechik.png";
 
 
-export default {arrow, logo, menu, youtube, close, people, icon, rightArrow, first, second, third, four, five, logoIcon, purple};
+export default {arrow, logo, menu, youtube, close, people, icon, rightArrow, first, second, third, four, five, logoIcon, purple, facebook, instagram, youtubechik};
