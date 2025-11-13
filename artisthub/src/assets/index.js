@@ -12,6 +12,7 @@ import third from "./third.png";
 import four from "./four.png";
 import five from "./five.png";
 import logoIcon from "./logoIcon.svg";
+import purple from "./purpleLogo.svg";
 
 
-export default {arrow, logo, menu, youtube, close, people, icon, rightArrow, first, second, third, four, five, logoIcon};
+export default {arrow, logo, menu, youtube, close, people, icon, rightArrow, first, second, third, four, five, logoIcon, purple};
