@@ -1,21 +1,31 @@
 .description {
-    font-family: "Epilogue", sans-serif;
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 18px;
-    line-height: 140%;
-    letter-spacing: -1%;
-    text-align: center;
-    padding-bottom: 32px;
+  font-family: "Epilogue", sans-serif;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: -1%;
+  text-align: center;
+  padding-bottom: 32px;
 }
 .name {
-    font-family: "IBM Plex Sans";
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 150%;
-    letter-spacing: 0%;
-    text-align: center;
+  font-family: "IBM Plex Sans";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: center;
 }
-.swiperContainer{
-    padding-bottom: 48px;
+.swiperContainer {
+  padding-bottom: 48px;
+}
+.star {
+  width: 20px;
+  height: auto;
+}
+.starList {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 32px;
 }
