@@ -141,6 +141,23 @@ img {
   width: 100%;
   height: auto;
 }
-html{
- scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
+}
+.slide.slide.slide {
+  color: aliceblue;
+  padding: 0 60px;
+}
+.swiper-pagination.swiper-pagination.swiper-pagination {
+  top: 65px;
+}
+.swiper-pagination-bullet-active.swiper-pagination-bullet-active.swiper-pagination-bullet-active {
+  background: #764191;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 1);
+}
+.swiper-button-prev.swiper-button-prev.swiper-button-prev,
+.swiper-button-next.swiper-button-next.swiper-button-next {
+  color: #764191;
 }
