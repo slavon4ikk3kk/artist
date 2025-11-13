@@ -149,7 +149,7 @@ html {
   padding: 0 60px;
 }
 .swiper-pagination.swiper-pagination.swiper-pagination {
-  top: 65px;
+  bottom: 0px;
 }
 .swiper-pagination-bullet-active.swiper-pagination-bullet-active.swiper-pagination-bullet-active {
   background: #764191;
