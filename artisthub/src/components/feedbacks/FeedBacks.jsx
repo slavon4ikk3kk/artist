@@ -114,8 +114,8 @@ const FeedBacks = () => {
           <textarea placeholder="Type your message..." className={s.textarea} rows={4} onChange={handleTextAreaChange} value={isTextArea}></textarea>
         </div>
         <div className={s.starList}>
-           {[1,2,3,4,5].map((star)=>{
-            <img key={star} src={star <= rating ? images.purpleStar : images.star} className={s.star} onClick={handleStarsChange(star)}  />
+           {arr.map((star)=>{
+            <img key={star} src={star <= rating ? images.purpleStar : images.star} className={s.star} onClick={handleStarsChange}  />
            })}
         </div>
         <button className={s.buttonSubmit} type="Submit" onClick={sendFeedBack}></button>
@@ -124,5 +124,4 @@ const FeedBacks = () => {
     </div>
   );
 };
-
 export default FeedBacks;
