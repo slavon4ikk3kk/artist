@@ -7,11 +7,13 @@ import images from "../../assets/index.js";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import StarRating from "./StarRating";
 
 const FeedBacks = () => {
   const [feedbacks, setFeedbacks] = useState([]);
   const [isModal, setIsModal] = useState(false);
   const [rating, setRating] = useState(0);
+  const [hover, setHover] = useState(0);
   const [isInput, setIsInput] = useState("");
   const [isTextArea, setIsTextArea] = useState("");
   async function fetchFeedBacks() {
@@ -37,43 +39,43 @@ const FeedBacks = () => {
     }
     return arr;
   }
-  function handleInputChange(e){
-   setIsInput(e.target.value);
+  function handleInputChange(e) {
+    setIsInput(e.target.value);
   }
-  function handleTextAreaChange(e){
+  function handleTextAreaChange(e) {
     setIsTextArea(e.target.value);
   }
-  function handleStarsChange(value){
-     setRating(value);
+  function handleStarsChange(value) {
+    setRating(value);
   }
- async function sendFeedBack(){
-   try {
-    const response = await fetch(
-      "https://sound-wave.b.goit.study/api/feedbacks",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: isInput,
-          descr: isTextArea,
-          rating: rating,
-        }),
-      }
-    );
+  async function sendFeedBack() {
+    try {
+      const response = await fetch(
+        "https://sound-wave.b.goit.study/api/feedbacks",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: isInput,
+            descr: isTextArea,
+            rating: rating,
+          }),
+        }
+      );
 
-    const data = await response.json();
-    console.log(data);
+      const data = await response.json();
+      console.log(data);
 
-    setIsModal(false);
-    setIsInput("");
-    setIsTextArea("");
-    setRating(0);
-    fetchFeedBacks();
-  } catch (error) {
-    console.error("error", error);
-  }
+      setIsModal(false);
+      setIsInput("");
+      setIsTextArea("");
+      setRating(0);
+      fetchFeedBacks();
+    } catch (error) {
+      console.error("error", error);
+    }
   }
   return (
     <div className={s.swiperContainer}>
@@ -102,25 +104,58 @@ const FeedBacks = () => {
             );
           })}
         </Swiper>
-        <button className={s.buttonFeedback} onClick={() => { setIsModal(true) }}>Leave Feedback</button>
+        <button
+          className={s.buttonFeedback}
+          onClick={() => {
+            setIsModal(true);
+          }}
+        >
+          Leave Feedback
+        </button>
       </div>
-      {isModal && <div className={s.overlay}>
-        <div className={s.modal}>
-          <img src={images.icon} className={s.cross} onClick={()=>{setIsModal(false)}}></img>
-          <p className={s.submit}>Submit feedback</p>
-          <label className={s.label}>Name</label>
-          <input placeholder="Emily" className={s.inputName} type="text" onChange={handleInputChange} value={isInput}></input>
-          <label className={s.label}>Message</label>
-          <textarea placeholder="Type your message..." className={s.textarea} rows={4} onChange={handleTextAreaChange} value={isTextArea}></textarea>
+      {isModal && (
+        <div className={s.overlay}>
+          <form className={s.modal}>
+            <img
+              src={images.icon}
+              className={s.cross}
+              onClick={() => {
+                setIsModal(false);
+              }}
+            ></img>
+            <p className={s.submit}>Submit feedback</p>
+            <label className={s.label}>Name</label>
+            <input
+              placeholder="Emily"
+              className={s.inputName}
+              type="text"
+              onChange={handleInputChange}
+              value={isInput}
+            ></input>
+            <label className={s.label}>Message</label>
+            <textarea
+              placeholder="Type your message..."
+              className={s.textarea}
+              rows={4}
+              onChange={handleTextAreaChange}
+              value={isTextArea}
+            ></textarea>
+            <StarRating
+              rating={rating}
+              setRating={setRating}
+              hover={hover}
+              setHover={setHover}
+            />
+            <button
+              className={s.buttonSubmit}
+              type="Submit"
+              onClick={sendFeedBack}
+            >
+              Submit
+            </button>
+          </form>
         </div>
-        <div className={s.starList}>
-           {arr.map((star)=>{
-            <img key={star} src={star <= rating ? images.purpleStar : images.star} className={s.star} onClick={handleStarsChange}  />
-           })}
-        </div>
-        <button className={s.buttonSubmit} type="Submit" onClick={sendFeedBack}></button>
-      </div>
-      }
+      )}
     </div>
   );
 };
