@@ -22,6 +22,7 @@ const Artist = () => {
 
   return (
     <section id="artists" className={s.section}>
+      <div className={s.gradient}></div>
       <div className="container">
         <div className={s.textContainer}>
           <p className={s.pArtists}>Artists</p>
