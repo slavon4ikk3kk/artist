@@ -10,6 +10,7 @@
   padding: 0 12px 0 20px;
   z-index: 1000;
 }
+
 .logo {
   width: 119px;
   height: 51px;
@@ -54,6 +55,7 @@
   font-size: 26px;
   line-height: 150%;
 }
+
 .gradient {
   height: 80px;
   width: 100vw;
@@ -61,4 +63,32 @@
   bottom: -80px;
   left: 0;
   background: linear-gradient(180deg, #060307 0%, rgba(35, 19, 43, 0) 100%);
+}
+
+@media screen and (min-width: 1440px) {
+  .ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    color: white;
+    gap: 32px;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+  }
+  .header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: black;
+  padding: 23px 64px 23px 64px;
+  z-index: 1000;
+  }
 }

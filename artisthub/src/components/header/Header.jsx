@@ -1,18 +1,42 @@
 import React, { useState } from "react";
 import s from "./Header.module.css";
 import images from "../../assets/index.js";
+import { useMediaQuery } from 'react-responsive';
 const Header = () => {
   const [isModal, setIsModal] = useState(false);
+  const isMobile = useMediaQuery({ query: '(max-width:767px)' });
+  const isDesktop = useMediaQuery({ query: '(min-width:1440px)' });
   return (
     <div className="container">
       <header className={s.header}>
         <div className={s.gradient}></div>
         <img src={images.logo} className={s.logo}></img>
-        <img
-          src={images.menu}
-          className={s.menu}
-          onClick={() => setIsModal(true)}
-        ></img>
+        {isDesktop ?
+          <nav><ul className={s.ul}>
+            <li>
+              <a href="#artists">
+                Artists
+              </a>
+            </li>
+            <li>
+              <a href="#about">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Reviews
+              </a>
+            </li>
+          </ul>
+          </nav>
+          :
+          <img
+            src={images.menu}
+            className={s.menu}
+            onClick={() => setIsModal(true)}
+          ></img>
+        }
         {isModal && (
           <div className={s.overlay}>
             <div className={s.modalHeader}>

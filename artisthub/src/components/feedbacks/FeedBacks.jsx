@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import StarRating from "./StarRating";
-
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 const FeedBacks = () => {
   const [feedbacks, setFeedbacks] = useState([]);
   const [isModal, setIsModal] = useState(false);
@@ -48,7 +48,8 @@ const FeedBacks = () => {
   function handleStarsChange(value) {
     setRating(value);
   }
-  async function sendFeedBack() {
+  async function sendFeedBack(e) {
+    e.preventDefault();
     try {
       const response = await fetch(
         "https://sound-wave.b.goit.study/api/feedbacks",
@@ -64,10 +65,12 @@ const FeedBacks = () => {
           }),
         }
       );
-
+      
       const data = await response.json();
       console.log(data);
-
+      Notify.success("Feedback sent successfully",{
+        timeout: 4000,
+      });
       setIsModal(false);
       setIsInput("");
       setIsTextArea("");
@@ -115,7 +118,7 @@ const FeedBacks = () => {
       </div>
       {isModal && (
         <div className={s.overlay}>
-          <form className={s.modal}>
+          <form className={s.modal} onSubmit={sendFeedBack}>
             <img
               src={images.icon}
               className={s.cross}
@@ -131,6 +134,7 @@ const FeedBacks = () => {
               type="text"
               onChange={handleInputChange}
               value={isInput}
+              required
             ></input>
             <label className={s.label}>Message</label>
             <textarea
@@ -139,6 +143,7 @@ const FeedBacks = () => {
               rows={4}
               onChange={handleTextAreaChange}
               value={isTextArea}
+              required
             ></textarea>
             <StarRating
               rating={rating}
@@ -149,7 +154,6 @@ const FeedBacks = () => {
             <button
               className={s.buttonSubmit}
               type="Submit"
-              onClick={sendFeedBack}
             >
               Submit
             </button>

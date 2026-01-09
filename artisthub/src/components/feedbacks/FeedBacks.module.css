@@ -131,10 +131,12 @@
 }
 
 .buttonSubmit {
+  width: 100%;
   background-color: #764191;
   padding: 10px 24px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 500;
@@ -143,4 +145,5 @@
   line-height: 150%;
   letter-spacing: 0%;
   border-radius: 12px;
+  cursor: pointer;
 }
