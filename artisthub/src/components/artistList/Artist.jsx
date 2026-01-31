@@ -31,7 +31,7 @@ const Artist = () => {
           {artistList.length > 0 &&
             artistList.map((artist) => {
               return (
-                <li>
+                <li className={s.liArtist}> 
                   <img src={artist.strArtistThumb}></img>
                   <ul className={s.ulGenre}>
                     {artist.genres.map((genre) => {

@@ -42,6 +42,9 @@ const LearnMore = ({ id }) => {
       {artist && (
         <div className={s.modal}>
           <p className={s.artistName}>{artist.strArtist}</p>
+          <div className={s.artistWrap}>
+          <img src={images.close} className={s.close}></img>
+          <div className={s.info}>
           <img src={artist.strArtistThumb} className={s.artistPhoto}></img>
           <p className={s.yearActive}>Years active:</p>
           <p className={s.year}>{artist.intFormedYear}</p>
@@ -58,6 +61,8 @@ const LearnMore = ({ id }) => {
               return <li className={s.genre}>{genre}</li>;
             })}
           </ul>
+          </div>
+          </div>
           <ul className={s.albums}>
             {albums &&
               albums.albumsList.map((album) => {
