@@ -20,6 +20,7 @@
   top: 0;
   left: 0;
 }
+
 .close {
   width: 48px;
   height: 48px;
@@ -28,6 +29,7 @@
   right: 16px;
   cursor: pointer;
 }
+
 .artistName {
   font-family: "Epilogue", sans-serif;
   font-weight: 700;
@@ -39,10 +41,12 @@
   margin-bottom: 16px;
   color: white;
 }
+
 .artistPhoto {
   border-radius: 8px;
   width: 100%;
 }
+
 .yearActive {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 600;
@@ -136,6 +140,7 @@
 .album {
   background-color: #1e1c1f;
   padding: 14px 11px;
+  border-radius: 16px;
 }
 
 .albums {
@@ -171,11 +176,13 @@
   font-weight: 400;
   line-height: 150%;
 }
+
 .youtube {
   width: 24px;
   height: 24px;
   margin-left: 16px;
 }
+
 .intDuration {
   width: 50px;
   text-align: center;
@@ -185,11 +192,13 @@
   width: 50px;
   text-align: center;
 }
+
 .none {
   width: 50px;
   text-align: center;
   padding-left: 7px;
 }
+
 .titleList {
   display: flex;
   font-family: "IBM Plex Sans", sans-serif;
@@ -205,14 +214,19 @@
   border-radius: 8px;
   justify-content: space-between;
 }
+
 .titleWrap {
   display: flex;
   gap: 35px;
 }
+
 .titleLink {
   width: 20px;
   text-align: center;
 }
+
+.album:hover {}
+
 @media screen and (min-width: 1440px) {
   .artistName {
     text-align: center;
@@ -220,33 +234,52 @@
     line-height: 130%;
     padding-bottom: 48px;
   }
+
   .artistWrap {
     display: flex;
     flex-wrap: nowrap;
     gap: 32px;
   }
+
   .photo {
     width: 50%;
     height: auto;
     flex-shrink: 0;
     flex-grow: 1;
   }
+
   .infoFirstWrap {
     display: flex;
     gap: 50px;
     margin-bottom: 24px;
   }
+
   .secondInfoWrap {
     display: flex;
     gap: 50px;
   }
+
   .albums {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
   }
+
   .album {
     width: 272px;
+  }
+
+  .titleTime {
+    font-size: 8px;
+     line-height: 150%;
+  }
+  .titleLink{
+    font-size: 8px;
+    line-height: 150%;
+  }
+  .titleTrack{
+    font-size: 8px;
+    line-height: 150%;
   }
 }

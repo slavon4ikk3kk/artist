@@ -84,9 +84,9 @@ const LearnMore = ({ id, setIsModal }) => {
                   <li className={s.album}>
                     <p className={s.albumName}>{album.strAlbum}</p>
                     <div className={s.titleList}>
-                      <p>Track</p>
+                      <p className={s.titleTrack}>Track</p>
                       <div className={s.titleWrap}>
-                        <p>Time</p>
+                        <p className={s.titleTime}>Time</p>
                         <p className={s.titleLink}>Link</p>
                       </div>
                     </div>

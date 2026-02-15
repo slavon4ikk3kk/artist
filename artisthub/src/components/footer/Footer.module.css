@@ -45,3 +45,9 @@
      width: 40px;
      height: 40px;    
 }
+.aMenu:hover{
+    color: #764191;
+}
+.icons:hover{
+    color: #764191;
+}

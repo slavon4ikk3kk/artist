@@ -47,6 +47,12 @@
   border-radius: 12px;
   margin: 0 auto;
   margin-top: 16px;
+  box-shadow: 0px 1px 2px 0px #00000033,
+  0px -2px 1px 0px #00000033 inset,
+  0px 0px 0px 1px #00000033 inset,
+  0px 2px 1px 0px #FFFFFF40 inset,
+  0px 32px 24px 0px #FFFFFF0D inset;
+  cursor: pointer;
 }
 
 .overlay {
@@ -81,8 +87,6 @@
   text-align: center;
   color: white;
 }
-
-.modal {}
 
 .textarea {
   border: 1px solid #FFFFFF33;

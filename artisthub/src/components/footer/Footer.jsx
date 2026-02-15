@@ -7,18 +7,18 @@ const Footer = () => {
         <footer className={s.footer}>
             <img src={images.purple} className={s.purple}/>
             <ul className={s.ul}>
-                <li>
-                    <a href="#artists">
+                <li >
+                    <a href="#artists" className={s.aMenu}>
                         Artists
                     </a>
                 </li>
-                <li>
-                    <a href="#about">
+                <li >
+                    <a href="#about" className={s.aMenu}>
                         About Us
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#" className={s.aMenu}>
                         Reviews
                     </a>
                 </li>
@@ -31,7 +31,7 @@ const Footer = () => {
                     <a href="#"><img src={images.facebook} className={s.icons}></img></a>
                 </li>
                 <li>
-                    <a href='#'><img src={images.youtubechik} className={s.icons}></img></a>
+                    <a href='#'><img src={images.youtube} className={s.icons}></img></a>
                 </li>
             </ul>
             <p className={s.bottomText}>© 2025 ArtistsHub. All rights reserved</p>
