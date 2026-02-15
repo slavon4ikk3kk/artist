@@ -58,3 +58,25 @@
 .socialWrap:hover {
   color: #764191;
 }
+@media screen and (min-width: 1440px){
+    .ul{
+        display: flex;
+        flex-direction: row;
+    }
+    .firstWrap{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+    }
+    .secondWrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .logos{
+      order: 1;
+    }
+}

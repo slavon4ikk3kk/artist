@@ -5,6 +5,8 @@ import images from "../../assets/index";
 const Footer = () => {
   return (
     <footer className={s.footer}>
+        <div className="container">
+        <div className={s.firstWrap}>
       <img src={images.purple} className={s.purple} />
       <ul className={s.ul}>
         <li>
@@ -23,6 +25,8 @@ const Footer = () => {
           </a>
         </li>
       </ul>
+      </div>
+      <div className={s.secondWrap}>
       <ul className={s.logos}>
         <li>
           <a className={s.socialWrap} href="#">
@@ -85,6 +89,8 @@ const Footer = () => {
         </li>
       </ul>
       <p className={s.bottomText}>© 2025 ArtistsHub. All rights reserved</p>
+      </div>
+      </div>
     </footer>
   );
 };
