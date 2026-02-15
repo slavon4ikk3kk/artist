@@ -47,7 +47,6 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 150%;
-  margin-top: 32px;
 }
 
 .year {
@@ -55,7 +54,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
-  padding-bottom: 16px;
+ 
 }
 
 .sex {
@@ -63,7 +62,7 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 150%;
-  padding-bottom: 16px;
+  
 }
 
 .gender {
@@ -71,7 +70,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 150%;
-  padding-bottom: 16px;
+  
 }
 
 .members {
@@ -228,7 +227,19 @@
       flex-wrap: nowrap;
       gap: 32px;
     }
-    .info{
-     
+    .photo{
+      width: 50%;
+      height: auto;
+      flex-shrink: 0;
+      flex-grow: 1;
+    }
+    .infoFirstWrap{
+      display: flex;
+      gap: 50px;
+      margin-bottom: 24px;
+    }
+    .secondInfoWrap{
+      display: flex;
+      gap: 50px;
     }
 }

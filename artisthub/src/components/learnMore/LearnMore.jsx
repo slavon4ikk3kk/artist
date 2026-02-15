@@ -4,6 +4,7 @@ import images from "../../assets/index";
 const LearnMore = ({ id }) => {
   const [artist, setArtist] = useState(null);
   const [albums, setalbums] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
   async function fetchArtist() {
     const response = await fetch(
       `https://sound-wave.b.goit.study/api/artists/${id}`
@@ -42,18 +43,32 @@ const LearnMore = ({ id }) => {
       {artist && (
         <div className={s.modal}>
           <p className={s.artistName}>{artist.strArtist}</p>
+          <img src={images.close} className={s.close} ></img>
           <div className={s.artistWrap}>
-          <img src={images.close} className={s.close}></img>
-          <div className={s.info}>
+          <div className={s.photo}>
           <img src={artist.strArtistThumb} className={s.artistPhoto}></img>
+          </div>
+          <div className={s.info}>
+          <div className={s.infoFirstWrap}>
+            <div>
           <p className={s.yearActive}>Years active:</p>
           <p className={s.year}>{artist.intFormedYear}</p>
+          </div>
+          <div>
           <p className={s.sex}>Sex</p>
           <p className={s.gender}>{artist.strGender}</p>
+          </div>
+          </div>
+          <div className={s.secondInfoWrap}>
+            <div>
           <p className={s.members}>Members</p>
           <p className={s.membersValue}>{artist.intMembers}</p>
+          </div>
+          <div>
           <p className={s.countryTitle}>Country</p>
           <p className={s.countryValue}>{artist.strCountry}</p>
+          </div>
+          </div>
           <p className={s.biographyTitle}>Biography</p>
           <p className={s.biographyValue}>{artist.strBiographyEN}</p>
           <ul className={s.ulGenre}>
