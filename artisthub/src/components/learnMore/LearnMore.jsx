@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import s from "./LearnMore.module.css";
 import images from "../../assets/index";
-const LearnMore = ({ id }) => {
+const LearnMore = ({ id, setIsModal }) => {
   const [artist, setArtist] = useState(null);
   const [albums, setalbums] = useState(null);
-  const [isOpen, setIsOpen] = useState(false);
   async function fetchArtist() {
     const response = await fetch(
       `https://sound-wave.b.goit.study/api/artists/${id}`
@@ -43,7 +42,7 @@ const LearnMore = ({ id }) => {
       {artist && (
         <div className={s.modal}>
           <p className={s.artistName}>{artist.strArtist}</p>
-          <img src={images.close} className={s.close} ></img>
+          <img src={images.close} className={s.close} onClick={()=>{setIsModal(false)}}></img>
           <div className={s.artistWrap}>
           <div className={s.photo}>
           <img src={artist.strArtistThumb} className={s.artistPhoto}></img>

@@ -65,7 +65,7 @@ const Artist = () => {
             Load more
           </button>
         </ul>
-        {isModal && <LearnMore id={id}></LearnMore>}
+        {isModal && <LearnMore id={id} setIsModal={setIsModal}></LearnMore>}
       </div>
     </section>
   );
