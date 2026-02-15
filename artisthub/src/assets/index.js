@@ -1,7 +1,7 @@
 import arrow from "./arrow.svg";
-import logo from './logo.svg';
-import menu from "./menu.svg"
-import youtube from "./Youtube.svg";
+import logo from "./logo.svg";
+import menu from "./menu.svg";
+import youtube from "./youtube.svg";
 import close from "./close.svg";
 import people from "./people.png";
 import icon from "./Icon.svg";
@@ -16,6 +16,26 @@ import purple from "./purpleLogo.svg";
 import facebook from "./Facebook.svg";
 import instagram from "./Instagram.svg";
 import star from "./star.png";
-import purpleStar from "./purpleStar.png"
+import purpleStar from "./purpleStar.png";
 
-export default {arrow, logo, menu, youtube, close, people, icon, rightArrow, first, second, third, four, five, logoIcon, purple, facebook, instagram, star, purpleStar};
+export default {
+  arrow,
+  logo,
+  menu,
+  youtube,
+  close,
+  people,
+  icon,
+  rightArrow,
+  first,
+  second,
+  third,
+  four,
+  five,
+  logoIcon,
+  purple,
+  facebook,
+  instagram,
+  star,
+  purpleStar,
+};
