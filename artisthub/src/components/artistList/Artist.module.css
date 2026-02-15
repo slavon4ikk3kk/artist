@@ -62,7 +62,9 @@
   gap: 8px;
   cursor: pointer;
 }
-
+.detailText:hover {
+  color: #764191;
+}
 .loadMore {
   display: block;
   width: 100%;
@@ -127,9 +129,9 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 32px;
+    gap: 30px;
   }
   .liArtist {
-    width: 640px;
+    width: 630px;
   }
 }

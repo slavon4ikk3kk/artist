@@ -30,12 +30,12 @@
 }
 
 .description {
-    color: white;
-    font-family: "IBM Plex Sans", sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 150%;
-    margin: 20px 0 24px 0;
+  color: white;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  margin: 20px 0 24px 0;
 }
 
 .rightArrow {
@@ -63,14 +63,13 @@
 }
 
 @media screen and (min-width: 1440px) {
-    .centerFlex {
-        display: flex;
-        align-items: center;
-        gap: 34px;
-        padding-top: 80px;
-        background-color: #23132b;
-        
-    }
+  .centerFlex {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    padding-top: 80px;
+    background-color: #23132b;
+  }
 
   .leftSide,
   .photosContainer {
@@ -113,9 +112,6 @@
     margin-bottom: 64px;
   }
 }
-.heroContainer{
-    background-color: #23132b;
-    padding: 0 31px 0 64px;
-
+.heroContainer {
+  background-color: #23132b;
 }
-

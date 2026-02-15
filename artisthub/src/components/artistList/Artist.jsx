@@ -32,7 +32,7 @@ const Artist = () => {
           {artistList.length > 0 &&
             artistList.map((artist) => {
               return (
-                <li className={s.liArtist}> 
+                <li className={s.liArtist}>
                   <img src={artist.strArtistThumb}></img>
                   <ul className={s.ulGenre}>
                     {artist.genres.map((genre) => {
@@ -50,7 +50,19 @@ const Artist = () => {
                       }}
                     >
                       Learn more{" "}
-                      <img src={images.arrow} className={s.arrow}></img>
+                      <svg
+                        width="8"
+                        height="15"
+                        viewBox="0 0 8 15"
+                        fill="currentColor"
+                        className={s.arrow}
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M0 14.6641L8 7.66406L0 0.664062V14.6641Z"
+                          fill="currentColor"
+                        />
+                      </svg>
                     </button>
                   </div>
                 </li>
